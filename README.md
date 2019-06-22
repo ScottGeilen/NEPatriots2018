@@ -1,19 +1,19 @@
-Query OK, 2 rows affected (1.16 sec)
+Query OK, 0 rows affected, 1 warning (0.00 sec)
 
 Query OK, 1 row affected (0.00 sec)
 
 Database changed
-Query OK, 0 rows affected (0.40 sec)
+Query OK, 0 rows affected (0.29 sec)
 
-Query OK, 0 rows affected (0.35 sec)
+Query OK, 0 rows affected (0.25 sec)
 
-Query OK, 16 rows affected (0.09 sec)
+Query OK, 16 rows affected (0.03 sec)
 Records: 16  Duplicates: 0  Warnings: 0
 
 Query OK, 16 rows affected (0.10 sec)
 Records: 16  Duplicates: 0  Warnings: 0
 
-ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`Project02`.`#sql-4b8_9`, CONSTRAINT `fk_GameName` FOREIGN KEY (`Name`) REFERENCES `OpponentTeam` (`Name`))
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`NEPatriots2018`.`#sql-4b8_9`, CONSTRAINT `fk_GameName` FOREIGN KEY (`Name`) REFERENCES `OpponentTeam` (`Name`))
 +-----------+-----------------+
 | Name      | ScoreDifference |
 +-----------+-----------------+
@@ -34,7 +34,7 @@ ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint f
 | Bills2    |              12 |
 | Jets2     |              35 |
 +-----------+-----------------+
-16 rows in set (0.06 sec)
+16 rows in set (0.00 sec)
 
 +-----------+------------+------------------+-------------------+-----------------------+-----------------+
 | Name      | Nickname   | Town             | Stadium           | TeamOwner             | ScoreDifference |
@@ -45,7 +45,7 @@ ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint f
 | Dolphins2 |            | Miami, FL        | Hard Rock Stadium | Stephen M. Ross       |              -1 |
 | Steelers  | Blitzburgh | Pittsburgh, PA   | Heinz Field       | The Rooney Family     |              -7 |
 +-----------+------------+------------------+-------------------+-----------------------+-----------------+
-5 rows in set (0.01 sec)
+5 rows in set (0.00 sec)
 
 +-----------+----------------------------+--------+--------+------------------+-----------------+
 | Name      | GameDate                   | Score1 | Score2 | Stadium          | ScoreDifference |
