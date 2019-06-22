@@ -66,14 +66,12 @@ ALTER TABLE Game ADD
 	REFERENCES OpponentTeam(Name);
 
 # What teams did the Pats play against and what was the point difference?
-# FINISHED
 SELECT Name, (SUM(Score1)+SUM(Score2)) AS ScoreDifference
 	FROM Game
 	GROUP BY GameID;
 
 # What teams beat the Pats, their nickname, their home town,
 # in what stadium was the game played and who owns them?
-# FINISHED
 SELECT Game.Name, Nickname, Town, Stadium, TeamOwner, (Score1+Score2) AS ScoreDifference
 	FROM Game
 	RIGHT JOIN OpponentTeam
@@ -83,7 +81,6 @@ SELECT Game.Name, Nickname, Town, Stadium, TeamOwner, (Score1+Score2) AS ScoreDi
 
 
 # What was the score, the date, and opponent for Patriot home games that the Pats won?
-# FINISHED
 SELECT Name, GameDate, Score1, Score2, Stadium, (Score1+Score2) AS ScoreDifference
 	FROM Game
 	WHERE Stadium="Gillette Stadium"
@@ -92,9 +89,6 @@ SELECT Name, GameDate, Score1, Score2, Stadium, (Score1+Score2) AS ScoreDifferen
 
 
 # Did the Pats lose any games by 7 or more points?
-# FINISHED
-# This one was easy. I just copy and pasted the first query and adjusted the "HAVING" 
-# clause to be -7 for games lost by 7 or more points
 SELECT Name, (Score1+Score2) AS ScoreDifference
 	FROM Game
 	HAVING ScoreDifference <=-7
